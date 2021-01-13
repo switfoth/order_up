@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template, redirect, url_for
 from flask_login import login_required
 
 bp = Blueprint("orders", __name__, url_prefix="")
@@ -7,4 +7,4 @@ bp = Blueprint("orders", __name__, url_prefix="")
 @bp.route("/")
 @login_required
 def index():
-    return "Order Up!"
+    return render_template("orders.html")

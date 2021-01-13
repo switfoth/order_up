@@ -21,6 +21,7 @@ def login():
         return redirect(url_for("orders.index"))
     return render_template("login.html", form=form)
 
+
 @bp.route('/logout', methods=["POST"])
 def logout():
     logout_user()
